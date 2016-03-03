@@ -5,7 +5,7 @@ class CreateLeaves < ActiveRecord::Migration
       t.integer :leave_type
       t.date :leave_date
       t.text :reason
-      
+
       t.timestamps null: false
     end
   end

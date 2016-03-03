@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  google_client_id: MyString
+  google_client_secret: MyString
+  slack_api_token: MyString
+  google_refresh_token: MyString
+  google_calendar_id: MyString
+
+two:
+  google_client_id: MyString
+  google_client_secret: MyString
+  slack_api_token: MyString
+  google_refresh_token: MyString
+  google_calendar_id: MyString

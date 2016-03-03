@@ -1,0 +1,13 @@
+<h1>Setting</h1>
+
+<%= form_for(@setting) do |f| %>
+  <%= f.label :slack_api_token, 'Slack API Token' %>
+  <%= f.text_field :slack_api_token %>
+  <br><br>
+
+  <%= f.label :google_calendar_id, 'Google Calendar ID' %>
+  <%= f.text_field :google_calendar_id %>
+  <br><br>
+
+  <%= f.submit "Save changes" %>
+<% end %>

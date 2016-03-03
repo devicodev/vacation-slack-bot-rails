@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
-  root 'auth#index'
-  get 'oauthcallback', to: 'auth#oauthcallback', as: 'oauthcallback'
+
+  root 'sessions#new'
+  resources :sessions, only: :index
+  get "/auth/:provider/callback" => 'sessions#create'
+
+  resources :settings, only: [:edit, :update]
 end

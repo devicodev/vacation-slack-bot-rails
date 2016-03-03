@@ -29,6 +29,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'slack-ruby-bot'
 gem 'signet'
 gem 'google-api-client', '0.9'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -38,7 +40,7 @@ gem 'google-api-client', '0.9'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'pry'
+  gem 'pry-rails'
   gem 'byebug'
 end
 
