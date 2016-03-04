@@ -1,6 +1,14 @@
 <h1>Setting</h1>
 
 <%= form_for(@setting) do |f| %>
+  <%= f.label :google_client_id, 'Google Client ID' %>
+  <%= f.text_field :google_client_id %>
+  <br><br>
+
+  <%= f.label :google_client_secret, 'Google Client Secret' %>
+  <%= f.text_field :google_client_secret %>
+  <br><br>
+
   <%= f.label :slack_api_token, 'Slack API Token' %>
   <%= f.text_field :slack_api_token %>
   <br><br>
