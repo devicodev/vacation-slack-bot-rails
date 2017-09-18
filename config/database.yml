@@ -7,8 +7,7 @@
 default: &default
   adapter: 'postgresql'
   host: 'localhost'
-  username: 'bot'
-  password: 'xXd73DFpAz5F'
+  username: ''
   encoding: 'utf8'
   pool: 5
 
