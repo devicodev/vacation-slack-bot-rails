@@ -7,7 +7,8 @@
 default: &default
   adapter: 'postgresql'
   host: 'localhost'
-  username: ''
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
   encoding: 'utf8'
   pool: 5
 
