@@ -5,16 +5,22 @@
 #   gem 'sqlite3'
 #
 default: &default
+#  adapter: 'postgresql'
+#  host: 'localhost'
+#  username: ''
+#  encoding: 'utf8'
+#  pool: 5
+  host: <%= ENV['DATABASE_URL'].split(/\/|:|@/)[5] %>
   adapter: 'postgresql'
-  host: 'localhost'
-  username: <%= ENV['DATABASE_USERNAME'] %>
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  database: <%= ENV['DATABASE_URL'].split(/\/|:|@/)[7] %>
+  username: <%= ENV['DATABASE_URL'].split(/\/|:|@/)[3] %>
+  password: <%= ENV['DATABASE_URL'].split(/\/|:|@/)[4] %>
   encoding: 'utf8'
   pool: 5
 
 development:
   <<: *default
-  database: 'vacation_development'
+#  database: 'vacation_development'
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
